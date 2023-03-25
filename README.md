@@ -1,6 +1,6 @@
 # Trigedasleng Dictionary
 
-This repo contains the source code for a website to display the Slakgedakru trigedasleng community dictionary. This site is designed to be deployed as a cloud-native static site to [slakgedakru.github.io/dictionary](slakgedakru.github.io/dictionary).
+This repo contains the source code for a website to display the Slakgedakru trigedasleng community dictionary. This site is designed to be deployed as a cloud-native static site to [slakgedakru.github.io](slakgedakru.github.io).
 
 # Deploy
 
