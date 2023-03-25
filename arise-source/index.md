@@ -2,7 +2,7 @@
 Title:: "Trigedasleng Reference"
 
 Author:: ""
-Description:: ""
+Description:: "A community reference site for the Trigedasleng language"
 Language:: "en"
 Thumbnail:: "logo.png"
 Published Date:: "2023-04-01"
