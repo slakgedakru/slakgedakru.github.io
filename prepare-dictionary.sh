@@ -58,6 +58,7 @@ Published Date:: "2023-04-01"
 Modified Date:: "$(date --iso)"
 
 rss_hide:: "true"
+content_header:: "false"
 ---- END ARISE \\ DO NOT MODIFY THIS LINE ---->
 
 # $word ($class)
