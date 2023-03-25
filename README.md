@@ -2,6 +2,10 @@
 
 This repo contains the source code for a website to display the Slakgedakru trigedasleng community dictionary. This site is designed to be deployed as a cloud-native static site to [slakgedakru.github.io](slakgedakru.github.io).
 
+## Data Sources
+
+This site automatically pulls its lexicon data from [slakgedakru/trigedasleng](https://github.com/slakgedakru/trigedasleng) at deploy time. 
+
 ## Deploy
 
 This dictionary has thousands of entries and takes a significant amount of workflow minutes to compile. As such, deployments are NOT automated with new pushes to `main`.
