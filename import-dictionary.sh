@@ -45,8 +45,8 @@ translation="$(jq -r ".translation" "$file")"
 etymology="$(jq -r ".etymology" "$file")"
 filter="$(jq -r ".filter" "$file")"
 
-mkdir "arise-source/$word"
-cat >> "arise-source/$word/index.md" <<EOF
+mkdir "arise-source/dictionary/$word"
+cat >> "arise-source/dictionary/$word/index.md" <<EOF
 <!-- BEGIN ARISE ------------------------------
 Title:: "$(clean_xml_string "$word")"
 
