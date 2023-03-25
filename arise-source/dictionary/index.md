@@ -1,8 +1,8 @@
 <!-- BEGIN ARISE ------------------------------
-Title:: "Index: Posts"
-
+Title:: "Trigedasleng Dictionary"
 Author:: ""
-Description:: "A collection of sample posts build with Arise"
+
+Description:: "A Trigedasleng to English Dictionary"
 Language:: "en"
 Thumbnail:: ""
 Published Date:: ""

@@ -1,4 +1,4 @@
 User-agent: * 
-Disallow: https://ari.se.net/config/*
+Disallow: https://slakgedakru.github.io/config/*
 
-Sitemap: https://ari.se.net/sitemap.xml
+Sitemap: https://slakgedakru.github.io/sitemap.xml
