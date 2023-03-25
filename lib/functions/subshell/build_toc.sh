@@ -23,9 +23,8 @@ cat >> index.html <<EOF
         <p id="arise-toc">
         <table id="arise-toc-table">
         <tr class="arise-toc-tr">
-                <th class="arise-toc-th">Date</th>
-                <th class="arise-toc-th">Title</th>
-                <th class="arise-toc-th">Description</th>
+                <th class="arise-toc-th">Trigedasleng</th>
+                <th class="arise-toc-th">English</th>
         </tr>
 EOF
 clear_metadata
@@ -34,7 +33,7 @@ clear_metadata
 toc_tmp="arise-toc-$RANDOM.tmp"
 find . -mindepth 2 -maxdepth 2 -type f -name 'index.md' | while read fname; do
 get_page_metadata $fname
-echo '<tr class="arise-toc-tr"><td class="arise-toc-td">'"$published_date"'</td><td class="arise-toc-td"><a href="'"$canonical_url"'">'"$title"'</a></td><td class="arise-toc-td">'"$description"'</td></tr>' >> $toc_tmp
+echo '<tr class="arise-toc-tr"><td class="arise-toc-td"><a href="'"$canonical_url"'">'"$title"'</a></td><td class="arise-toc-td">'"$description"'</td></tr>' >> $toc_tmp
 clear_metadata
 done
 
