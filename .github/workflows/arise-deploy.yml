@@ -33,7 +33,7 @@ jobs:
         run: sudo apt-get install -y pandoc
 
       - name: Import trigedasleng lexicon
-        run: bash prepare-dictionary.sh
+        run: bash import-dictionary.sh
 
       - name: Build Arise
         run: bash arise build
