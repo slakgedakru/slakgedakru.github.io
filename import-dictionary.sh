@@ -17,6 +17,18 @@ function clean_xml_string() (
   echo "$input_string"
 )
 
+# Helper function to clean word folder names for URLs
+function clean_url_string() (
+  input_string="$1"
+  input_string=${input_string// /_}
+  input_string=${input_string//\&/-}
+  input_string=${input_string//</-}
+  input_string=${input_string//>/-}
+  input_string=${input_string//\'/-}
+  input_string=${input_string//\"/-}
+  echo "$input_string"
+)
+
 # Pull down only the dictionary folder from the lexicon
 mkdir trigedasleng
 cd trigedasleng
@@ -42,11 +54,15 @@ filter="noncanon"
 word="$(jq -r ".word" "$file")"
 class="$(jq -r ".class" "$file")"
 translation="$(jq -r ".translation" "$file")"
+note=""
+note="$(jq -r ".note" "$file")"
 etymology="$(jq -r ".etymology" "$file")"
 filter="$(jq -r ".filter" "$file")"
 
-mkdir "arise-source/dictionary/$word"
-cat >> "arise-source/dictionary/$word/index.md" <<EOF
+word_nospaces=""
+word_nospaces="$(clean_url_string "$word")"
+mkdir "arise-source/dictionary/$word_nospaces"
+cat >> "arise-source/dictionary/$word_nospaces/index.md" <<EOF
 <!-- BEGIN ARISE ------------------------------
 Title:: "$(clean_xml_string "$word")"
 
@@ -54,8 +70,8 @@ Author:: ""
 Description:: "$(clean_xml_string "$translation")"
 Language:: "en"
 Thumbnail:: ""
-Published Date:: "2023-04-01"
-Modified Date:: "$(date --iso)"
+Published Date:: ""
+Modified Date:: ""
 
 rss_hide:: "true"
 content_header:: "false"
@@ -64,6 +80,7 @@ content_header:: "false"
 # $word ($class)
 
 $translation
+$([[ -n $note ]] && echo -e "\n### Notes\n\n$note")
 
 ### Etymology
 
