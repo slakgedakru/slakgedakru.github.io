@@ -1,6 +1,22 @@
 #!/bin/bash
 # This is a ridiculously hacky script to pull down the entire trigedasleng lexicon and format it as Arise webpages.
 
+# Helper function to help us clean up reserved characters when we're building our site
+function clean_xml_string() (
+  input_string="$1"
+  # replace & with &amp;
+  input_string=${input_string//\&/\&38;}
+  # replace < with &lt;
+  input_string=${input_string//</\&60;}
+  # replace > with &gt;
+  input_string=${input_string//>/\&62;}
+  # replace ' with &apos;
+  input_string=${input_string//\'/\&39;}
+  # replace " with &quot;
+  input_string=${input_string//\"/\&34;}
+  echo "$input_string"
+)
+
 # Pull down only the dictionary folder from the lexicon
 mkdir trigedasleng
 cd trigedasleng
@@ -32,15 +48,16 @@ filter="$(jq -r ".filter" "$file")"
 mkdir "dictionary/$word"
 cat >> "dictionary/$word/index.md" <<EOF
 <!-- BEGIN ARISE ------------------------------
-Title:: "$word"
+Title:: "$(clean_xml_string "$word")"
 
 Author:: ""
-Description:: "$translation"
+Description:: "$(clean_xml_string "$translation")"
 Language:: "en"
 Thumbnail:: ""
 Published Date:: "2023-04-01"
 Modified Date:: "$(date --iso)"
 
+rss_hide:: "true"
 ---- END ARISE \\ DO NOT MODIFY THIS LINE ---->
 
 # $word ($class)
