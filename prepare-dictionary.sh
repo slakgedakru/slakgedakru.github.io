@@ -45,8 +45,8 @@ translation="$(jq -r ".translation" "$file")"
 etymology="$(jq -r ".etymology" "$file")"
 filter="$(jq -r ".filter" "$file")"
 
-mkdir "dictionary/$word"
-cat >> "dictionary/$word/index.md" <<EOF
+mkdir "arise-source/$word"
+cat >> "arise-source/$word/index.md" <<EOF
 <!-- BEGIN ARISE ------------------------------
 Title:: "$(clean_xml_string "$word")"
 
@@ -72,8 +72,5 @@ $etymology
 
 $filter
 EOF
-
-# Removes json source file safely
-rm "dictionary/$(basename "$file")"
 
 done
