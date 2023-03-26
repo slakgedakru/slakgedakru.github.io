@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: https://slakgedakru.github.io/config/*
+
+Sitemap: https://slakgedakru.github.io/sitemap.xml
