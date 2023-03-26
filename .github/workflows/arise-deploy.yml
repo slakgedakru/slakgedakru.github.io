@@ -4,9 +4,9 @@ name: Deploy Arise to html branch
 on:
   # Runs on pushes targeting the default branch
   # Only runs when the push contains changes to the site source itself. No need to rebuild the site if it's just program files that have changed.
-  #  push:
-  #    branches: ["main"]
-  #    paths: ['arise-source/**']
+  push:
+    branches: ["main"]
+    paths: ['arise-source/**']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
     name: Deploy Arise
     steps:
       - name: git-checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install pandoc
         run: sudo apt-get install -y pandoc
