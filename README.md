@@ -1,6 +1,6 @@
 # Trigedasleng / Slaksleng Reference Site
 
-This repo contains the source code and deployment workflow for [slakgedakru.github.io](slakgedakru.github.io), a cloud-native static site version of the Trigedasleng community reference site.
+This repo contains the source code and deployment workflow for [slakgedakru.github.io](https://slakgedakru.github.io), a cloud-native static site version of the Trigedasleng community reference site.
 
 The purpose of this site is to improve upon the now-defunct [trigedasleng.net](https://github.com/projectarkadiateam/trigedasleng) in two primary ways:
 
