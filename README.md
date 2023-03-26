@@ -1,10 +1,10 @@
-# Trigedasleng Dictionary Site
+# Trigedasleng / Slaksleng Reference Site
 
 This repo contains the source code and deployment workflow for [slakgedakru.github.io](slakgedakru.github.io), a cloud-native static site version of the Trigedasleng community reference site.
 
 The purpose of this site is to improve upon the now-defunct [trigedasleng.net](https://github.com/projectarkadiateam/trigedasleng) in two primary ways:
 
-- This site relies on a GitHub repository ([slakgedakru/trigedasleng](https://github.com/slakgedakru/trigedasleng) instead of a database as a backend.
+- This site relies on a GitHub repository ([slakgedakru/trigedasleng](https://github.com/slakgedakru/trigedasleng)) instead of a database as a backend.
     - This allows anyone to download, fork, or contribute to the actual dataset for the Trigedasleng lexicon in a transparent and version controlled way.
 - This site is fully cloud-native and is 100% free to operate with no hosting costs (and thus no risk of going down due to lack of funding).
 
