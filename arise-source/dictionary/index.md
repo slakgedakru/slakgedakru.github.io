@@ -2,7 +2,7 @@
 Title:: "Trigedasleng Dictionary"
 Author:: ""
 
-Description:: "A Trigedasleng to English Dictionary"
+Description:: "Trigedasleng to English Dictionary"
 Language:: "en"
 Thumbnail:: ""
 Published Date:: ""
