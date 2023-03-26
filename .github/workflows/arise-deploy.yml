@@ -32,6 +32,9 @@ jobs:
       - name: Install pandoc
         run: sudo apt-get install -y pandoc
 
+      - name: Install jq
+        run: sudo apt-get install -y j
+
       - name: Import trigedasleng lexicon
         run: bash import-dictionary.sh
 
