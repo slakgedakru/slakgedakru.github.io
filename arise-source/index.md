@@ -14,7 +14,7 @@ rss_hide:: "true"
 
 # Trigedasleng Community Reference
 
-This site is intended to be an open source community reference for **trigedasleng**, a language by David J. Peterson for the TV show *[The 100](https://www.imdb.com/title/tt2661044/)*.
+This site is intended to be an open source community reference for **Trigedasleng**, a language by David J. Peterson for the TV show *[The 100](https://www.imdb.com/title/tt2661044/)*.
 
 This dictionary is a reference for **Slaksleng**, the dialect of Trigedasleng spoken by the Slakgedakru community, which includes noncanon words that have been documented by the community. Join us on [Discord](https://discord.gg/MFnCpEB)!
 
